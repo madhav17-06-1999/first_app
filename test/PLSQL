@@ -1,0 +1,14 @@
+CREATE OR REPLACE FUNCTION test_function (
+    p_id in number,
+    p_name in varchar2,
+    p_salary in number
+) return varchar2
+is
+ v_rsulut varchar2(1000);
+ begin 
+
+ select 'id:'||p_id||',name:'||p_name||',salary:'||p_salary into v_rsulut from dual;
+
+ return v_rsulut;
+ end;
+ 
